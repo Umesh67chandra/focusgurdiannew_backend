@@ -45,3 +45,6 @@ instance/
 # OS
 .DS_Store
 Thumbs.db
+
+# Custom venv
+backend_venv/
