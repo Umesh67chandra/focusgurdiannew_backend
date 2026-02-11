@@ -110,7 +110,7 @@ def create_app():
             return jsonify({"success": False, "message": "Invalid credentials"}), 401
 
         if not bcrypt.checkpw(password.encode("utf-8"), user.password_hash.encode("utf-8")):
-            return jsonify({"success": False, "message": "Invalid credentials"}), 401
+            return jsonify({"success": False, "message": "You have entered an incorrect password"}), 401
 
         token = generate_token(user.id, user.email)
         return jsonify({
